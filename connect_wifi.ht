@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络配置</title>
+<style>
+    body {{ text-align: center; }}
+    form {{ display: inline-block; text-align: left; }}
+    select,input {{width: 100%;margin-bottom: 20px;padding: 0px}}
+</style>
+</head>
+<body>
+<h2>请连接WIFI &#127759;</h2>
+<p>点击“扫描网络”可以获取附近WIFI，然后选择一个WIFI连接。<font color="red">请确保WIFI能够连接网络，否则设备无法在线更新，部分应用将无法使用</font></p>
+<div>
+    <form action="/scan">
+        <input type="submit" value="扫描网络">
+        </form>
+    </div>
+<div>
+    <form action="/connectwifi">
+        WIFI名称<select name="ssid">{}</select><br>
+        WIFI密码<input type="password" name="password"><br>
+        <input type="submit" value="连接网络">
+        </form>
+
+</div>
+
+</body>
+</html>
